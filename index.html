@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashburn Studios</title>
+<meta name="description" content="Ashburn Studios is an independent game studio. Our first game, Compost Comrades, is an active incremental game about producing compost for the Motherland. Coming soon to Steam.">
+<link rel="canonical" href="https://ashburn-studios.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ashburn Studios">
+<meta property="og:title" content="Compost Comrades by Ashburn Studios">
+<meta property="og:description" content="Water your Comrades to grow them. Harvest and slice them into compost for the Motherland. Coming soon to Steam.">
+<meta property="og:image" content="https://ashburn-studios.com/assets/capsule-a.png">
+<meta property="og:url" content="https://ashburn-studios.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b9301d">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&display=swap">
+<style>
+/* Layout: a propaganda poster read top to bottom. Red paper hero, dark compost band for
+   the loop, olive field strip for screenshots, red call to wishlist, dirt-brown studio footer.
+   Georgia Bold is the game's own UI font; Archivo Narrow does the stencilled labels. */
+:root {
+  --red: #b9301d;
+  --red-deep: #8a2113;
+  --cream: #e8d98a;
+  --cream-pale: #f3eac0;
+  --olive: #4e5b2c;
+  --olive-deep: #36401d;
+  --compost: #3a2217;
+  --dirt: #5c3a2e;
+  --dirt-light: #8d5538;
+  --ink: #241410;
+
+  --font-display: Georgia, "Times New Roman", Times, serif;
+  --font-body: Georgia, "Times New Roman", Times, serif;
+  --font-label: "Archivo Narrow", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 62ch;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --wrap: 1120px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--compost);
+  color: var(--cream-pale);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--cream); outline-offset: 3px; }
+
+.wrap {
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-left: var(--gutter-l);
+  padding-right: var(--gutter-r);
+}
+
+.label {
+  font-family: var(--font-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; text-wrap: balance; margin: 0; line-height: 1.05; }
+p { margin: 0; max-width: var(--measure); }
+
+/* Header */
+.site-header {
+  background: var(--dirt);
+  color: var(--cream-pale);
+  border-bottom: 4px solid var(--ink);
+}
+.site-header .wrap {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  padding-block: 14px;
+}
+.wordmark {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.04em;
+  text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+}
+.wordmark img { width: 28px; height: 28px; image-rendering: pixelated; border-radius: 4px; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.site-nav a { text-decoration: none; opacity: 0.9; padding-block: 4px; }
+.site-nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Hero */
+.hero {
+  background: var(--red) url("assets/red-paper.jpg") center / cover;
+  color: var(--cream);
+  border-bottom: 6px solid var(--ink);
+}
+.hero .wrap {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 40px; align-items: center; padding-block: 56px 64px;
+}
+.hero-eyebrow { color: var(--cream); opacity: 0.92; margin-bottom: 18px; }
+.hero h1 {
+  font-size: clamp(2.6rem, 7.2vw, 5.2rem);
+  text-transform: uppercase; letter-spacing: -0.01em;
+  text-shadow: 3px 3px 0 var(--red-deep);
+}
+.slogan {
+  display: inline-block; margin-top: 18px;
+  background: var(--cream); color: var(--red);
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(0.78rem, 1.6vw, 1rem); letter-spacing: 0.02em; line-height: 1.2;
+  padding: 7px 12px 6px; box-shadow: 3px 3px 0 var(--red-deep);
+}
+.hero-copy { margin-top: 26px; font-size: 1.1rem; color: var(--cream-pale); }
+.hero-meta { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--cream); opacity: 0.95; }
+.hero-meta span::before { content: "\25C6"; font-size: 0.55em; vertical-align: middle; margin-right: 10px; opacity: 0.8; }
+.hero-meta span:first-child::before { content: none; }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.btn {
+  font-family: var(--font-label); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 0.95rem; text-decoration: none; padding: 14px 22px; border: 3px solid var(--cream);
+  display: inline-flex; align-items: center; gap: 10px; line-height: 1; transition: transform 120ms ease, background 120ms ease;
+}
+.btn-primary { background: var(--cream); color: var(--red-deep); box-shadow: 4px 4px 0 var(--red-deep); }
+.btn-primary:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--red-deep); }
+.btn-ghost { color: var(--cream); background: transparent; }
+.btn-ghost:hover { background: rgba(232, 217, 138, 0.14); }
+.btn svg { width: 18px; height: 18px; fill: currentColor; }
+.btn-breathe { animation: breathe 2.6s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+
+.poster { position: relative; justify-self: end; width: min(100%, 560px); }
+.poster-frame {
+  background: var(--cream-pale); padding: 10px;
+  box-shadow: 0 2px 0 var(--red-deep), 10px 14px 0 rgba(36, 20, 16, 0.35);
+  transform: rotate(-1.6deg); transition: transform 300ms ease;
+}
+.poster-frame:hover { transform: rotate(0deg); }
+.poster-frame img { border: 2px solid var(--olive-deep); }
+.poster-pin {
+  position: absolute; top: -10px; left: 50%; width: 22px; height: 22px; margin-left: -11px; z-index: 1;
+  background: var(--ink); border-radius: 50%; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.35), 0 3px 4px rgba(0,0,0,0.4);
+}
+
+/* Section scaffold */
+.section { padding-block: 64px 72px; }
+.section-head { display: grid; gap: 10px; margin-bottom: 36px; }
+.section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.section-head .label { opacity: 0.85; }
+.section-head p { font-size: 1.05rem; opacity: 0.92; }
+
+/* Loop */
+.loop { background: var(--compost); color: var(--cream-pale); }
+.loop .label { color: var(--cream); }
+.directives { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.directive { display: grid; grid-template-rows: auto auto auto 1fr; gap: 14px; }
+.directive video {
+  width: 100%; aspect-ratio: 1170 / 608; object-fit: cover; background: var(--ink);
+  border: 3px solid var(--cream); box-shadow: 6px 6px 0 var(--red-deep);
+}
+.directive-num {
+  font-family: var(--font-display); font-weight: 700; color: var(--cream);
+  display: flex; align-items: baseline; gap: 12px; margin-top: 8px;
+}
+.directive-num .label { color: var(--cream); opacity: 0.75; }
+.directive h3 { font-size: 1.35rem; }
+.directive p { font-size: 1rem; opacity: 0.9; }
+
+/* Screenshots */
+.fields { background: var(--olive); color: var(--cream-pale); border-top: 6px solid var(--ink); border-bottom: 6px solid var(--ink); }
+.fields .label { color: var(--cream); }
+.strip {
+  display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 14px;
+  scrollbar-color: var(--cream) var(--olive-deep);
+}
+.strip figure { margin: 0; flex: 0 0 min(78vw, 520px); scroll-snap-align: start; }
+.strip img { aspect-ratio: 16 / 9; object-fit: cover; border: 3px solid var(--cream-pale); background: var(--ink); }
+.strip figcaption { font-family: var(--font-label); font-size: 0.85rem; letter-spacing: 0.04em; margin-top: 8px; opacity: 0.9; }
+.strip-hint { font-family: var(--font-label); font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; margin-top: 6px; }
+
+/* Wishlist band */
+.wishlist { background: var(--red) url("assets/red-paper.jpg") center / cover; color: var(--cream-pale); }
+.wishlist .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: end; }
+.wishlist .label { color: var(--cream); }
+.wishlist h2 { color: var(--cream); font-size: clamp(1.9rem, 4.4vw, 3rem); text-shadow: 3px 3px 0 var(--red-deep); }
+.wishlist p { margin-top: 14px; font-size: 1.1rem; }
+.steam-widget { margin-top: 26px; max-width: 646px; }
+.steam-widget iframe { width: 100%; height: 190px; border: 0; display: block; background: var(--ink); }
+.sickle { width: clamp(140px, 22vw, 260px); justify-self: end; image-rendering: pixelated; filter: drop-shadow(6px 8px 0 rgba(36, 20, 16, 0.35)); }
+
+/* Studio */
+.studio { background: var(--dirt); color: var(--cream-pale); border-top: 6px solid var(--ink); }
+.studio .wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 40px; }
+.studio .label { color: var(--cream); }
+.studio h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 16px; }
+.studio p + p { margin-top: 14px; }
+.contact { display: grid; gap: 18px; align-content: start; }
+.contact dl { margin: 0; display: grid; gap: 14px; }
+.contact dt { font-family: var(--font-label); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; color: var(--cream); }
+.contact dd { margin: 2px 0 0; }
+.contact a { text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+/* Footer */
+.site-footer { background: var(--ink); color: var(--cream-pale); font-size: 0.9rem; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-block: 22px; }
+.site-footer p { opacity: 0.8; max-width: none; }
+
+@media (max-width: 820px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-block: 40px 52px; }
+  .poster { justify-self: start; margin-top: 10px; }
+  .directives { grid-template-columns: 1fr; gap: 36px; }
+  .wishlist .wrap { grid-template-columns: 1fr; }
+  .sickle { justify-self: start; }
+  .studio .wrap { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn-breathe { animation: none; }
+  .poster-frame, .btn { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="#top"><img src="assets/icon-64.png" alt="" width="28" height="28">Ashburn Studios</a>
+    <nav class="site-nav label" aria-label="Site">
+      <a href="#game">Compost Comrades</a>
+      <a href="#screens">Screenshots</a>
+      <a href="#studio">Studio</a>
+      <a href="https://store.steampowered.com/app/5393120/" rel="noopener">Steam</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="game">
+  <div class="wrap">
+    <div>
+      <div class="label hero-eyebrow">Ashburn Studios presents</div>
+      <h1>Compost Comrades</h1>
+      <div class="slogan">From each plant, according to its decomposition!</div>
+      <p class="hero-copy">An active incremental game about producing compost for the Motherland. Water your comrades to grow them. Harvest and slice them into compost. Unlock and upgrade special Power Plants and become the ultimate Compost Comrade.</p>
+      <div class="hero-meta label">
+        <span>Coming soon</span>
+        <span>Steam</span>
+        <span>Windows</span>
+        <span>Single-player</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-breathe" href="https://store.steampowered.com/app/5393120/" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-9.96 9.1l5.36 2.21a2.83 2.83 0 0 1 1.6-.5h.16l2.38-3.45v-.05a3.77 3.77 0 1 1 3.77 3.77h-.09l-3.4 2.43v.13a2.83 2.83 0 0 1-5.63.4L2.36 14.5A10 10 0 1 0 12 2zm-3.7 15.1a2.12 2.12 0 0 1-1.1-.3l1.23.5a1.6 1.6 0 1 0 1.23-2.95l-1.27-.52a2.12 2.12 0 1 1-.09 3.27zm7.03-6.2a2.52 2.52 0 1 1 0-5.04 2.52 2.52 0 0 1 0 5.04zm0-4.4a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8z"/></svg>
+          Wishlist on Steam
+        </a>
+        <a class="btn btn-ghost" href="https://store.steampowered.com/app/5393170/" rel="noopener">Demo page</a>
+      </div>
+    </div>
+    <div class="poster">
+      <span class="poster-pin" aria-hidden="true"></span>
+      <div class="poster-frame">
+        <img src="assets/capsule-b.png" width="1232" height="706" alt="Compost Comrades key art: a grinning sickle with a moustache beside a crowd of smiling corn comrades on crumpled red paper." fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section loop" aria-labelledby="loop-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">The gameplay loop</div>
+      <h2 id="loop-title">Three directives for the aspiring comrade</h2>
+      <p>Grow, slice, reinvest. Every round ends with a pile of compost and a quota to beat. Fill it, earn your medal, and push further up the research tree.</p>
+    </div>
+    <div class="directives">
+      <article class="directive">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Watering plant comrades so they sprout and grow">
+          <source src="assets/video/loop-1.webm" type="video/webm">
+          <source src="assets/video/loop-1.mp4" type="video/mp4">
+        </video>
+        <div class="directive-num"><span class="label">Directive</span><span>I</span></div>
+        <h3>Water your Comrades</h3>
+        <p>Fill the can and soak the plot. Seeds sprout faces, stalks shoot up, and every comrade you raise is one more contribution to the pile.</p>
+      </article>
+      <article class="directive">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Slicing grown plants into compost">
+          <source src="assets/video/loop-2.webm" type="video/webm">
+          <source src="assets/video/loop-2.mp4" type="video/mp4">
+        </video>
+        <div class="directive-num"><span class="label">Directive</span><span>II</span></div>
+        <h3>Harvest and slice them into compost</h3>
+        <p>When they are ripe, swing the sickle. Chain slices for a bonus, keep the bin full, and meet the quota before the round runs out.</p>
+      </article>
+      <article class="directive">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Unlocking and upgrading Power Plants in the research tree">
+          <source src="assets/video/loop-3.webm" type="video/webm">
+          <source src="assets/video/loop-3.mp4" type="video/mp4">
+        </video>
+        <div class="directive-num"><span class="label">Directive</span><span>III</span></div>
+        <h3>Unlock and upgrade Power Plants</h3>
+        <p>Spend compost on the research tree. Bigger watering cans, bumper crops, the Corn Collective, and finally a reset For the Motherland that sends you back to the dirt stronger.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section fields" id="screens" aria-labelledby="screens-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">Screenshots</div>
+      <h2 id="screens-title">From the fields</h2>
+    </div>
+    <div class="strip" tabindex="0" aria-label="Screenshot gallery, scrolls sideways">
+      <figure><img src="assets/screens/ss-1.jpg" loading="lazy" width="1920" height="1080" alt="Watering a fenced plot of fresh dirt under a smiling pixel sun."><figcaption>Morning on the plot</figcaption></figure>
+      <figure><img src="assets/screens/ss-2.jpg" loading="lazy" width="1920" height="1080" alt="Gameplay screenshot from Compost Comrades."><figcaption>Comrades coming up</figcaption></figure>
+      <figure><img src="assets/screens/ss-3.jpg" loading="lazy" width="1920" height="1080" alt="Gameplay screenshot from Compost Comrades."><figcaption>Tending the rows</figcaption></figure>
+      <figure><img src="assets/screens/ss-4.jpg" loading="lazy" width="1920" height="1080" alt="Sliced plants tumbling into the compost bin with a slice bonus on screen."><figcaption>Slice bonus: +42%</figcaption></figure>
+      <figure><img src="assets/screens/ss-5.jpg" loading="lazy" width="1920" height="1080" alt="Gameplay screenshot from Compost Comrades."><figcaption>The research tree</figcaption></figure>
+      <figure><img src="assets/screens/ss-6.jpg" loading="lazy" width="1920" height="1080" alt="Gameplay screenshot from Compost Comrades."><figcaption>Quota filled</figcaption></figure>
+    </div>
+    <div class="strip-hint">Scroll sideways for more</div>
+  </div>
+</section>
+
+<section class="section wishlist" aria-labelledby="wishlist-title">
+  <div class="wrap">
+    <div>
+      <div class="label">Do your part</div>
+      <h2 id="wishlist-title">Wishlist Compost Comrades</h2>
+      <p>Wishlists tell Steam how many comrades are waiting at launch. One click, no cost, and you get a note the day it releases.</p>
+      <div class="steam-widget">
+        <iframe src="https://store.steampowered.com/widget/5393120/" title="Compost Comrades on Steam" loading="lazy"></iframe>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://store.steampowered.com/app/5393120/" rel="noopener">Open the Steam page</a>
+        <a class="btn btn-ghost" href="https://store.steampowered.com/app/5393170/" rel="noopener">Demo page</a>
+      </div>
+    </div>
+    <img class="sickle" src="assets/sickle.png" width="2260" height="2700" alt="The Sickle, a grey pixel-art sickle with wide eyes and a dark moustache." loading="lazy">
+  </div>
+</section>
+
+<section class="section studio" id="studio" aria-labelledby="studio-title">
+  <div class="wrap">
+    <div>
+      <div class="label">The studio</div>
+      <h2 id="studio-title">Ashburn Studios</h2>
+      <p>Ashburn Studios is an independent game studio. Compost Comrades is our first release: a small, dense incremental game with hand-drawn pixel art, built in Unity and headed to Steam for Windows.</p>
+      <p>We like games you can play with one hand, quotas that feel just slightly unfair, and vegetables with faces.</p>
+    </div>
+    <div class="contact">
+      <dl>
+        <div><dt>Contact</dt><dd><a href="mailto:support@ashburn-studios.com">support@ashburn-studios.com</a></dd></div>
+        <div><dt>Press</dt><dd>Key art and screenshots are free to use in coverage. <a href="assets/title-card.png" download>Download the title card</a> or email us for more.</dd></div>
+        <div><dt>Steam</dt><dd><a href="https://store.steampowered.com/app/5393120/" rel="noopener">Compost Comrades</a> · <a href="https://store.steampowered.com/app/5393170/" rel="noopener">Demo</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Ashburn Studios</p>
+    <p>Steam and the Steam logo are trademarks of Valve Corporation.</p>
+  </div>
+</footer>
+
+</body>
+</html>
