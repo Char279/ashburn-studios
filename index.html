@@ -26,7 +26,7 @@
    screenshots, red call to wishlist, dirt-brown studio footer.
    Georgia Bold is the game's own UI font; Archivo Narrow does the stencilled labels.
    The studio wordmark is Patua One, a Clarendon-style slab (Clarendon dates from 1845, the
-   decade Ashburn Hall was built); the mark is the hall's pedimented portico. */
+   decade Ashburn Hall was built); the mark is an A drawn as the hall's pediment. */
 :root {
   --red: #b9301d;
   --red-deep: #8a2113;
@@ -98,7 +98,7 @@ p { margin: 0; max-width: var(--measure); }
   text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 12px;
   color: var(--cream);
 }
-.wordmark .mark { width: 70px; height: 42px; flex: none; }
+.wordmark .mark { width: 34px; height: 32px; flex: none; }
 .mark { display: block; fill: currentColor; }
 .site-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
 .site-nav a { text-decoration: none; opacity: 0.9; padding-block: 4px; }
@@ -226,35 +226,19 @@ p { margin: 0; max-width: var(--measure); }
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <!-- Ashburn Hall's front elevation (viewBox 0 0 120 72): exposed end chimneys, the cornice,
-         three upper windows with the wide triple in the centre, and across the ground floor the
-         pedimented portico on two pairs of Tuscan columns flanked by the twin pedimented bay windows.
-         The favicon (assets/favicon.svg) is the portico alone, which holds up at 16px. -->
-    <g id="elevation">
-      <path fill-rule="evenodd" d="M24 47 L60 33 L96 47 Z M31 45.5 L60 36.7 L89 45.5 Z"/>
-      <path d="M0 48 L12 40 L24 48 Z M96 48 L108 40 L120 48 Z"/>
-      <rect x="9" y="0" width="8" height="12"/><rect x="103" y="0" width="8" height="12"/>
-      <rect x="0" y="12" width="120" height="6"/>
-      <rect x="16" y="22" width="10" height="11"/><rect x="94" y="22" width="10" height="11"/>
-      <rect x="48" y="22" width="7" height="11"/><rect x="56.5" y="22" width="7" height="11"/><rect x="65" y="22" width="7" height="11"/>
-      <rect x="26" y="48" width="68" height="5"/>
-      <rect x="26.5" y="54" width="6" height="2.5"/><rect x="27.25" y="56.5" width="4.5" height="11.5"/><rect x="26.5" y="68" width="6" height="2.5"/>
-      <rect x="34.5" y="54" width="6" height="2.5"/><rect x="35.25" y="56.5" width="4.5" height="11.5"/><rect x="34.5" y="68" width="6" height="2.5"/>
-      <rect x="79.5" y="54" width="6" height="2.5"/><rect x="80.25" y="56.5" width="4.5" height="11.5"/><rect x="79.5" y="68" width="6" height="2.5"/>
-      <rect x="87.5" y="54" width="6" height="2.5"/><rect x="88.25" y="56.5" width="4.5" height="11.5"/><rect x="87.5" y="68" width="6" height="2.5"/>
-      <rect x="50" y="56" width="20" height="2.2"/>
-      <rect x="50" y="60" width="2.5" height="10.5"/><rect x="67.5" y="60" width="2.5" height="10.5"/>
-      <rect x="54.5" y="60" width="4.8" height="10.5"/><rect x="60.7" y="60" width="4.8" height="10.5"/>
-      <rect x="1" y="49" width="22" height="4"/><rect x="2.75" y="55" width="5.5" height="13"/><rect x="9.25" y="55" width="5.5" height="13"/><rect x="15.75" y="55" width="5.5" height="13"/>
-      <rect x="97" y="49" width="22" height="4"/><rect x="98.75" y="55" width="5.5" height="13"/><rect x="105.25" y="55" width="5.5" height="13"/><rect x="111.75" y="55" width="5.5" height="13"/>
-      <rect x="0" y="70" width="120" height="2"/>
+    <!-- Studio mark (viewBox 0 0 64 60): an "A" drawn as a pediment on a plinth, after the
+         Greek Revival gable of Ashburn Hall. Same geometry as assets/favicon.svg. -->
+    <g id="mark-a">
+      <path fill-rule="evenodd" d="M32 2 L62 50 L2 50 Z M32 15 L51.5 44 L12.5 44 Z"/>
+      <path d="M21.5 30 L42.5 30 L46.5 36 L17.5 36 Z"/>
+      <rect x="0" y="54" width="64" height="5"/>
     </g>
   </defs>
 </svg>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="wordmark" href="#top"><svg class="mark" viewBox="0 0 120 72" aria-hidden="true"><use href="#elevation"/></svg>Ashburn Studios</a>
+    <a class="wordmark" href="#top"><svg class="mark" viewBox="0 0 64 60" aria-hidden="true"><use href="#mark-a"/></svg>Ashburn Studios</a>
     <nav class="site-nav label" aria-label="Site">
       <a href="#game">Compost Comrades</a>
       <a href="#screens">Screenshots</a>
