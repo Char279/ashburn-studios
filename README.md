@@ -6,8 +6,7 @@ Hosted on GitHub Pages; the domain is registered at Squarespace and points here.
 ## Editing
 
 - Copy and layout live in `index.html`. Colors and fonts are the `:root` tokens at the top of the `<style>` block.
-- Key art comes from the Plant-Game repo (`Assets/Art/`). Screenshots and the three gameplay loops
-  (`assets/screens/`, `assets/video/`) were pulled from the Steam store page; replace them whenever the
+- Key art comes from the Plant-Game repo (`Assets/Art/`). Screenshots (`assets/screens/`) were pulled from the Steam store page; replace them whenever the
   store assets change.
 - Steam links: full game app `5393120`, demo app `5393170`.
 

@@ -21,8 +21,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&display=swap">
 <style>
-/* Layout: a propaganda poster read top to bottom. Red paper hero, dark compost band for
-   the loop, olive field strip for screenshots, red call to wishlist, dirt-brown studio footer.
+/* Layout: a propaganda poster read top to bottom. Red paper hero, olive field strip for
+   screenshots, red call to wishlist, dirt-brown studio footer.
    Georgia Bold is the game's own UI font; Archivo Narrow does the stencilled labels. */
 :root {
   --red: #b9301d;
@@ -160,25 +160,8 @@ p { margin: 0; max-width: var(--measure); }
 .section-head .label { opacity: 0.85; }
 .section-head p { font-size: 1.05rem; opacity: 0.92; }
 
-/* Loop */
-.loop { background: var(--compost); color: var(--cream-pale); }
-.loop .label { color: var(--cream); }
-.directives { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-.directive { display: grid; grid-template-rows: auto auto auto 1fr; gap: 14px; }
-.directive video {
-  width: 100%; aspect-ratio: 1170 / 608; object-fit: cover; background: var(--ink);
-  border: 3px solid var(--cream); box-shadow: 6px 6px 0 var(--red-deep);
-}
-.directive-num {
-  font-family: var(--font-display); font-weight: 700; color: var(--cream);
-  display: flex; align-items: baseline; gap: 12px; margin-top: 8px;
-}
-.directive-num .label { color: var(--cream); opacity: 0.75; }
-.directive h3 { font-size: 1.35rem; }
-.directive p { font-size: 1rem; opacity: 0.9; }
-
 /* Screenshots */
-.fields { background: var(--olive); color: var(--cream-pale); border-top: 6px solid var(--ink); border-bottom: 6px solid var(--ink); }
+.fields { background: var(--olive); color: var(--cream-pale); border-bottom: 6px solid var(--ink); }
 .fields .label { color: var(--cream); }
 .strip {
   display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 14px;
@@ -219,7 +202,6 @@ p { margin: 0; max-width: var(--measure); }
 @media (max-width: 820px) {
   .hero .wrap { grid-template-columns: 1fr; padding-block: 40px 52px; }
   .poster { justify-self: start; margin-top: 10px; }
-  .directives { grid-template-columns: 1fr; gap: 36px; }
   .wishlist .wrap { grid-template-columns: 1fr; }
   .sickle { justify-self: start; }
   .studio .wrap { grid-template-columns: 1fr; }
@@ -272,45 +254,6 @@ p { margin: 0; max-width: var(--measure); }
       <div class="poster-frame">
         <img src="assets/capsule-b.png" width="1232" height="706" alt="Compost Comrades key art: a grinning sickle with a moustache beside a crowd of smiling corn comrades on crumpled red paper." fetchpriority="high">
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section loop" aria-labelledby="loop-title">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="label">The gameplay loop</div>
-      <h2 id="loop-title">Three directives for the aspiring comrade</h2>
-      <p>Grow, slice, reinvest. Every round ends with a pile of compost and a quota to beat. Fill it, earn your medal, and push further up the research tree.</p>
-    </div>
-    <div class="directives">
-      <article class="directive">
-        <video autoplay muted loop playsinline preload="metadata" aria-label="Watering plant comrades so they sprout and grow">
-          <source src="assets/video/loop-1.webm" type="video/webm">
-          <source src="assets/video/loop-1.mp4" type="video/mp4">
-        </video>
-        <div class="directive-num"><span class="label">Directive</span><span>I</span></div>
-        <h3>Water your Comrades</h3>
-        <p>Fill the can and soak the plot. Seeds sprout faces, stalks shoot up, and every comrade you raise is one more contribution to the pile.</p>
-      </article>
-      <article class="directive">
-        <video autoplay muted loop playsinline preload="metadata" aria-label="Slicing grown plants into compost">
-          <source src="assets/video/loop-2.webm" type="video/webm">
-          <source src="assets/video/loop-2.mp4" type="video/mp4">
-        </video>
-        <div class="directive-num"><span class="label">Directive</span><span>II</span></div>
-        <h3>Harvest and slice them into compost</h3>
-        <p>When they are ripe, swing the sickle. Chain slices for a bonus, keep the bin full, and meet the quota before the round runs out.</p>
-      </article>
-      <article class="directive">
-        <video autoplay muted loop playsinline preload="metadata" aria-label="Unlocking and upgrading Power Plants in the research tree">
-          <source src="assets/video/loop-3.webm" type="video/webm">
-          <source src="assets/video/loop-3.mp4" type="video/mp4">
-        </video>
-        <div class="directive-num"><span class="label">Directive</span><span>III</span></div>
-        <h3>Unlock and upgrade Power Plants</h3>
-        <p>Spend compost on the research tree. Bigger watering cans, bumper crops, the Corn Collective, and finally a reset For the Motherland that sends you back to the dirt stronger.</p>
-      </article>
     </div>
   </div>
 </section>
